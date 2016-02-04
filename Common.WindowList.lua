@@ -5,7 +5,7 @@ local F = far.Flags
 
 local function WindowsCount() return far.AdvControl (F.ACTL_GETWINDOWCOUNT) end
 
-local function makeuid(Area,id,pos,name) return Area.." Id="..id.."; Pos="..pos..": `"..name.."`" end
+local function makeuid(Area,id,pos,name) return pos.." [Id="..id.."] "..Area.." `"..name.."`" end
 
 local En = {
   [F.WTYPE_PANELS]="Panels",[F.WTYPE_VIEWER]="View",[F.WTYPE_EDITOR]="Edit",
@@ -30,6 +30,6 @@ action=function()
     local w = getWindow(i)
     s = s..w.uid.."\n"
   end
-  msgbox(title,s)
+  msgbox(title,s,8)
 end;
 }
