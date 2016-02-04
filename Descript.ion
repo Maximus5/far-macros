@@ -1,0 +1,3 @@
+Common.WindowList.lua Common: Test macro to show current windows of Far Manager
+Editor.F9.lua Editor: Save and reload lua macros
+Panel.Esc.lua Panel: Use Esc to toggle panels on/off
